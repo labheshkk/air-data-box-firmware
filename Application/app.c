@@ -1,29 +1,26 @@
 #include "app.h"
 
-/*--------------------------------------------------------------------
- * APP_Init
- *------------------------------------------------------------------*/
-void APP_Init(void)
+APP_Status_t APP_Init(void)
 {
     /*
-     * Initialize all application modules
+     * Planned Initialization Sequence
      *
-     * Planned:
-     * - Sensor Manager
-     * - Filters
-     * - Air Data Processing
-     * - CAN Interface
+     * Honeywell_Init();
+     * BMP581_Init();
+     * MS5611_Init();
+     * CAN_Init();
      */
+
+    return APP_OK;
 }
 
-/*--------------------------------------------------------------------
- * APP_Run
- *------------------------------------------------------------------*/
 void APP_Run(void)
 {
     /*
-     * Main Application Execution Flow
-     *
+     * Planned Runtime Sequence
+     */
+
+    /*
      * SensorManager_Run();
      * Filter_Run();
      * AirData_Run();
