@@ -1,1 +1,25 @@
+# Signal Filtering Module
 
+## Purpose
+
+Reduce noise and improve stability of pressure measurements.
+
+## Implemented Filters
+
+### Moving Average Filter
+
+Used for smoothing sensor measurements.
+
+### Low Pass Filter
+
+Used for suppressing high-frequency noise.
+
+## Data Flow
+
+Raw Data
+↓
+Moving Average
+↓
+Low Pass
+↓
+Filtered Data
