@@ -1,1 +1,35 @@
+# Software Architecture
 
+Application Layer
+↓
+Service Layer
+↓
+Driver Layer
+↓
+STM32 HAL
+
+## Driver Layer
+
+- Honeywell Driver
+- BMP581 Driver
+- MS5611 Driver
+- CAN Driver
+
+## Service Layer
+
+- Sensor Manager
+- Filters
+- Air Data Processing
+
+## Application Layer
+
+- Initialization
+- Scheduling
+- Runtime Control
+
+## Design Goals
+
+- Modularity
+- Maintainability
+- Scalability
+- Testability
