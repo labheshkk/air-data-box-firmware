@@ -1,1 +1,31 @@
+# 5. Services/SensorManager/README.md
 
+```markdown
+# Sensor Manager
+
+## Purpose
+
+Centralized management of all pressure sensors.
+
+## Responsibilities
+
+- Sensor scheduling
+- Data collection
+- Timestamping
+- Validation
+- Health monitoring
+
+## Data Flow
+
+Sensors
+↓
+Sensor Manager
+↓
+Filters
+
+## Validation Checks
+
+- Communication Status
+- Timeout Detection
+- Range Check
+- Sensor Mismatch Detection
