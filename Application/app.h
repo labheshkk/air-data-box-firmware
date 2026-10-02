@@ -1,32 +1,10 @@
-#include "app.h"
+#ifndef APP_H
+#define APP_H
 
-/*--------------------------------------------------------------------
- * APP_Init
- *------------------------------------------------------------------*/
-void APP_Init(void)
-{
-    /*
-     * Initialize all application modules
-     *
-     * Planned:
-     * - Sensor Manager
-     * - Filters
-     * - Air Data Processing
-     * - CAN Interface
-     */
-}
+/* Application Initialization */
+void APP_Init(void);
 
-/*--------------------------------------------------------------------
- * APP_Run
- *------------------------------------------------------------------*/
-void APP_Run(void)
-{
-    /*
-     * Main Application Execution Flow
-     *
-     * SensorManager_Run();
-     * Filter_Run();
-     * AirData_Run();
-     * CAN_Run();
-     */
-}
+/* Application Main Task */
+void APP_Run(void);
+
+#endif /* APP_H */
