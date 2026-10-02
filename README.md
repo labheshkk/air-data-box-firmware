@@ -20,17 +20,13 @@ STM32-based Air Data Box firmware architecture for pressure acquisition, airspee
 
 [Insert firmware_architecture.png]
 
-## Repository Structure
-
-[Folder Tree]
-
 ## Development Roadmap
 
-- [x] Architecture Proposal
-- [x] Repository Structure
-- [ ] Sensor Drivers
-- [ ] Sensor Manager
-- [ ] Filtering Module
-- [ ] Air Data Algorithms
-- [ ] CAN Interface
-- [ ] System Integration
+-  Architecture Proposal
+-  Repository Structure
+-  Sensor Drivers
+-  Sensor Manager
+-  Filtering Module
+-  Air Data Algorithms
+-  CAN Interface
+-  System Integration
