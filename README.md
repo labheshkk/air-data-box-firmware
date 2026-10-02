@@ -14,11 +14,11 @@ STM32-based Air Data Box firmware architecture for pressure acquisition, airspee
 
 ## System Architecture
 
-[Insert system_architecture.png]
+[[Attached in Docs]]
 
 ## Firmware Architecture
 
-[Insert firmware_architecture.png.png]
+[Attached in Docs]
 
 ## Development Roadmap
 
