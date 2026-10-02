@@ -1,1 +1,28 @@
+# Air Data Processing Module
 
+## Purpose
+
+Convert pressure measurements into flight parameters.
+
+## Inputs
+
+- Differential Pressure
+- Static Pressure
+- Temperature
+
+## Outputs
+
+- Airspeed
+- Altitude
+- Dynamic Pressure
+- Static Pressure
+
+## Equations
+
+### Airspeed
+
+V = √(2q/ρ)
+
+### Altitude
+
+Altitude = 44330 × (1 − (P/P₀)^0.1903)
