@@ -1,32 +1,36 @@
-# Air Data Box Firmware
+# Air Data Box Firmware Skeleton
 
-STM32-based Air Data Box firmware architecture for pressure acquisition, airspeed calculation, altitude estimation, and CAN communication.
+Target MCU: STM32H755ZIT6  
+Communication: DroneCAN over CAN/FDCAN peripheral  
+Architecture: Bare-metal time-triggered scheduler with modular drivers/services
 
-## Features
+## Contents
+- Application layer
+- Deterministic scheduler
+- Sensor abstraction interfaces
+- Honeywell/BMP581/MS5611 driver shells
+- Sensor manager
+- Moving-average and low-pass filters
+- Airspeed and altitude processing
+- DroneCAN API boundary
+- Platform configuration
 
-- Honeywell Differential Pressure Integration
-- BMP581 Static Pressure Integration
-- MS5611 Static Pressure Integration
-- Airspeed Calculation
-- Altitude Calculation
-- CAN Communication
-- Modular Firmware Architecture
+## Integration
+1. Create an STM32CubeIDE project for STM32H755ZIT6.
+2. Generate clock/GPIO/I2C/SPI/FDCAN init using CubeMX.
+3. Add these source folders.
+4. Implement `Platform/platform_port.c` using CubeMX HAL handles.
+5. Add the chosen DroneCAN/libcanard implementation.
+6. Replace placeholder sensor protocol code using exact datasheets.
+7. Configure project-specific DroneCAN DSDL message types and node parameters.
 
-## System Architecture
+## Runtime Flow
+Platform -> Drivers -> Sensor Manager -> Filters -> Air Data -> DroneCAN
 
-[[Attached in Docs]]
-
-## Firmware Architecture
-
-[Attached in Docs]
-
-## Development Roadmap
-
--  Architecture Proposal
--  Repository Structure
--  Sensor Drivers
--  Sensor Manager
--  Filtering Module
--  Air Data Algorithms
--  CAN Interface
--  System Integration
+## Current Assumptions
+- Initial application on Cortex-M7.
+- Bare-metal periodic scheduler.
+- BMP581 on I2C.
+- MS5611 on SPI.
+- Honeywell transport abstracted until interface is confirmed.
+- DroneCAN message types are intentionally not hard-coded until network requirements are known.
